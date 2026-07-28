@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Dr. Keyan Ghazi-Zahedi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">KGZ</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="publications.html" class="nav-link active">Publications</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="cv.html" class="nav-link">CV</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h1>Publications</h1>
+            <p class="page-subtitle">Research papers, theses, and technical reports</p>
+        </section>
+
+        <section class="section">
+            <div class="filter-controls">
+                <label for="year-filter">Filter by year:</label>
+                <select id="year-filter">
+                    <option value="all">All Years</option>
+                </select>
+                <label for="type-filter">Filter by type:</label>
+                <select id="type-filter">
+                    <option value="all">All Types</option>
+                    <option value="article">Journal Articles</option>
+                    <option value="inproceedings">Conference Papers</option>
+                    <option value="incollection">Book Chapters</option>
+                    <option value="book">Books</option>
+                    <option value="phdthesis">PhD Thesis</option>
+                    <option value="mastersthesis">Master's Thesis</option>
+                    <option value="techreport">Technical Reports</option>
+                </select>
+            </div>
+
+            <div class="publications-list" id="publications-list">
+                <p class="loading">Loading publications...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Dr. Keyan Ghazi-Zahedi</p>
+            <div class="footer-links">
+                <a href="https://scholar.google.de/citations?user=ClJlXDIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://github.com/kzahedi" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://orcid.org/0000-0003-0409-6284" target="_blank" rel="noopener">ORCID</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bibtex-parser.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
