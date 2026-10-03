@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1RM Coach: plan, build up, load and lift your max</title>
+  <meta name="description" content="An iPhone app for barbell lifters: plan a peaking block, get a build-up from the empty bar to your max, see which plates go on and off, and run your attempts with a rest clock.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="index.html">1RM Coach</a>
+      <nav aria-label="1RM Coach">
+        <a href="howto.html">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>1RM Coach</h1>
+          <p>Plan the weeks before, then run max day: a build-up from the empty bar to today&#8217;s target, the plates for every set, a rest clock, and the next attempt when you make one.</p>
+          <div class="actions">
+            <a class="button" href="#beta">Join the beta</a>
+            <a href="howto.html">See how it works</a>
+          </div>
+        </div>
+        <div class="phone"><img src="img/rest.jpg" width="600" height="1304" alt="Rest screen: a large clock counting down, and the next lift, 50 kg for 3, below it."></div>
+      </section>
+
+      <figure class="ladder">
+        <ol aria-label="Example build-up, previous best 100 kg, target 102 kg">
+          <li style="--w: 0.000; --step: 0" aria-label="20 kg for 5; per side: no plates">
+            <span class="set">20<small>×5</small></span>
+            <span class="plates" aria-hidden="true"></span>
+          </li>
+          <li style="--w: 0.244; --step: 1" aria-label="40 kg for 3; per side: 10">
+            <span class="set">40<small>×3</small></span>
+            <span class="plates" aria-hidden="true"><i class="p10"></i></span>
+          </li>
+          <li style="--w: 0.366; --step: 2" aria-label="50 kg for 3; per side: 15">
+            <span class="set">50<small>×3</small></span>
+            <span class="plates" aria-hidden="true"><i class="p15"></i></span>
+          </li>
+          <li style="--w: 0.488; --step: 3" aria-label="60 kg for 2; per side: 20">
+            <span class="set">60<small>×2</small></span>
+            <span class="plates" aria-hidden="true"><i class="p20"></i></span>
+          </li>
+          <li style="--w: 0.610; --step: 4" aria-label="70 kg for 2; per side: 25">
+            <span class="set">70<small>×2</small></span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i></span>
+          </li>
+          <li style="--w: 0.671; --step: 5" aria-label="75 kg for 1; per side: 25 + 2.5">
+            <span class="set">75<small>×1</small></span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i><i class="p25s"></i></span>
+          </li>
+          <li style="--w: 0.732; --step: 6" aria-label="80 kg for 1; per side: 25 + 5">
+            <span class="set">80<small>×1</small></span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i><i class="p5"></i></span>
+          </li>
+          <li style="--w: 0.793; --step: 7" aria-label="85 kg for 1; per side: 25 + 5 + 2.5">
+            <span class="set">85<small>×1</small></span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i><i class="p5"></i><i class="p25s"></i></span>
+          </li>
+          <li style="--w: 0.854; --step: 8" aria-label="90 kg for 1; per side: 25 + 10">
+            <span class="set">90<small>×1</small></span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i><i class="p10"></i></span>
+          </li>
+          <li style="--w: 0.902; --step: 9" aria-label="94 kg for 1; per side: 25 + 10 + 2">
+            <span class="set">94<small>×1</small></span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i><i class="p10"></i><i class="p2s"></i></span>
+          </li>
+          <li style="--w: 0.951; --step: 10" aria-label="98 kg for 1; per side: 25 + 10 + 2.5 + 1.5">
+            <span class="set">98<small>×1</small></span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i><i class="p10"></i><i class="p25s"></i><i class="p15s"></i></span>
+          </li>
+          <li class="attempt" style="--w: 1.000; --step: 11" aria-label="102 kg for 1, the attempt; per side: 25 + 15 + 1">
+            <span class="set">102</span>
+            <span class="plates" aria-hidden="true"><i class="p25"></i><i class="p15"></i><i class="p1s"></i></span>
+          </li>
+        </ol>
+        <figcaption>Max day for a previous best of 100 kg and a target of 102 kg: every build-up set with the plates for one side of the bar, ending in the attempt.</figcaption>
+      </figure>
+
+      <section class="feature">
+        <div class="copy">
+          <h2>Max day, set by set</h2>
+          <p>Enter your last best and today&#8217;s target. The app works out the build-up ladder, tells you which plates come off and which go on, and starts the rest clock once the bar is loaded. Beeps count you in.</p>
+          <p>When you make an attempt it proposes the next one, a sensible step up that your plates can load. Miss, and you retry or call it a day. Your best goes straight into your history.</p>
+        </div>
+        <div class="shots">
+          <div class="phone"><img src="img/load.jpg" width="600" height="1304" alt="Load screen: plates to take off in red, plates to put on in green." loading="lazy"></div>
+          <div class="phone"><img src="img/rest.jpg" width="600" height="1304" alt="Rest screen with the clock and the next lift." loading="lazy"></div>
+          <div class="phone"><img src="img/decision.jpg" width="600" height="1304" alt="After a made attempt: the proposed next weight with buttons to go lighter or heavier." loading="lazy"></div>
+        </div>
+      </section>
+
+      <section class="feature flip">
+        <div class="copy">
+          <h2>Plan the weeks before</h2>
+          <p>A peaking block of four to eight weeks for one lift, two or three days a week. Every session lists the weights and the plates per side.</p>
+          <p>Log what you lifted. If a heavy set falls short, the rest of the block gets lighter; if two heavy days in a row go well above plan, it gets heavier. The last day hands over to max day.</p>
+        </div>
+        <div class="shots">
+          <div class="phone"><img src="img/block.jpg" width="600" height="1304" alt="A training block: base 1RM, the current adjustment and today&#8217;s session." loading="lazy"></div>
+        </div>
+      </section>
+
+      <section class="feature">
+        <div class="copy">
+          <h2>See where you stand</h2>
+          <p>Your tested maxes, your best so far, and an estimate from the sets you log, averaged over four weeks so one good day doesn&#8217;t fool you. Export everything as a CSV file whenever you like.</p>
+        </div>
+        <div class="shots">
+          <div class="phone"><img src="img/history.jpg" width="600" height="1304" alt="A chart of tested maxes, the estimated max and the best so far over a year." loading="lazy"></div>
+        </div>
+      </section>
+
+      <section class="feature flip">
+        <div class="copy">
+          <h2>Your build-up, in your words</h2>
+          <p>Type your scheme the way you&#8217;d tell a training partner:</p>
+          <p class="notation">bar ×5, 40 ×3, 60 ×2, 80 ×1 | rest 80: 2 min</p>
+          <p>Or just describe it. On iPhones with Apple Intelligence the app reads plain English or German on the phone itself. You see the session it would build before anything changes.</p>
+        </div>
+        <div class="shots">
+          <div class="phone"><img src="img/scheme.jpg" width="600" height="1304" alt="The scheme preview: build-up steps, target reps, rest, and the example session." loading="lazy"></div>
+        </div>
+      </section>
+
+      <section class="quiet">
+        <div>
+          <h2>Stays on your phone</h2>
+          <p>No account, no tracking, no ads. Your lifts are stored on your iPhone and nowhere else. Read the <a href="privacy.html">privacy policy</a>.</p>
+        </div>
+        <div id="beta">
+          <h2>The beta</h2>
+          <p>1RM Coach is being tested now, on iPhone through TestFlight. It needs iOS 27. Android follows after the iPhone beta.</p>
+          <p>If you test your max a few times a year and want to try it, ask the person who sent you this link. A contact address follows soon.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>1RM Coach</span>
+      <nav aria-label="More">
+        <a href="howto.html">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </footer>
+  </div>
+  <script>
+    // The address is assembled in the browser, so it isn't sitting in the page source for spam bots.
+    document.querySelectorAll("a.mail").forEach(function (a) {
+      var address = a.dataset.user + "@" + a.dataset.domain;
+      a.href = "mailto:" + address;
+      a.textContent = address;
+    });
+  </script>
+</body>
+</html>

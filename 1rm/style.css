@@ -1,0 +1,176 @@
+/* 1RM Coach — product pages under /1rm/. Chalk and steel, with competition plate colours only where
+   they mean plates. */
+
+@font-face { font-family: "Barlow Condensed"; font-weight: 500; font-display: swap; src: url("fonts/BarlowCondensed-500.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-weight: 600; font-display: swap; src: url("fonts/BarlowCondensed-600.woff2") format("woff2"); }
+@font-face { font-family: "Barlow Condensed"; font-weight: 700; font-display: swap; src: url("fonts/BarlowCondensed-700.woff2") format("woff2"); }
+@font-face { font-family: "Work Sans"; font-weight: 400; font-display: swap; src: url("fonts/WorkSans-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Work Sans"; font-weight: 500; font-display: swap; src: url("fonts/WorkSans-Medium.woff2") format("woff2"); }
+@font-face { font-family: "Work Sans"; font-weight: 600; font-display: swap; src: url("fonts/WorkSans-SemiBold.woff2") format("woff2"); }
+
+:root {
+  --chalk: #eef0f1;
+  --paper: #f8f9f9;
+  --steel: #1c252d;
+  --steel-soft: #4a555e;
+  --bar: #8a949c;
+  --rule: #d5dadd;
+  --red: #d52b2b;
+  --blue: #1f5fbf;
+  --yellow: #f2c230;
+  --green: #2f9a4c;
+  --white-plate: #fbfbfa;
+  --button-text: #ffffff;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --text: "Work Sans", system-ui, sans-serif;
+  --measure: 34rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --chalk: #151b20;
+    --paper: #1b2228;
+    --steel: #e7ebed;
+    --steel-soft: #aab4bb;
+    --bar: #6d7880;
+    --rule: #2b343b;
+    --white-plate: #dfe3e5;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--chalk);
+  color: var(--steel);
+  font: 400 1.0625rem/1.6 var(--text);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { width: min(72rem, 100% - 2rem); margin-inline: auto; }
+
+/* Top line: back to the homepage, and the page links. */
+.top {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 1rem;
+  padding: 1.25rem 0; font-size: 0.95rem; color: var(--steel-soft);
+}
+.top nav { display: flex; gap: 1.25rem; }
+.top a { text-decoration: none; white-space: nowrap; }
+.top a:hover, .top a[aria-current] { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3rem; align-items: center;
+  padding: 2.5rem 0 3rem;
+}
+.hero h1 {
+  font: 700 clamp(3.5rem, 11vw, 7.5rem)/0.88 var(--display);
+  letter-spacing: -0.01em; margin: 0 0 1.25rem;
+}
+.hero p { max-width: var(--measure); font-size: 1.2rem; margin: 0 0 1.75rem; color: var(--steel-soft); }
+.actions { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; }
+.button {
+  display: inline-block; padding: 0.8rem 1.4rem; border-radius: 0.4rem;
+  background: var(--red); color: var(--button-text); text-decoration: none;
+  font: 600 1.25rem/1 var(--display); letter-spacing: 0.02em;
+}
+.button:hover { background: #b82222; }
+
+.phone {
+  width: 15.5rem; border-radius: 2.2rem; padding: 0.45rem;
+  background: #0d1216; box-shadow: 0 1.5rem 3rem -1.5rem rgba(28, 37, 45, 0.55);
+}
+.phone img { border-radius: 1.8rem; }
+
+/* The ladder: today's build-up, from the empty bar to the attempt. Numbers grow with the weight. */
+.ladder { border-block: 1px solid var(--rule); padding: 2.5rem 0 1.75rem; margin-bottom: 1rem; }
+.ladder ol {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1.5rem 1.4rem;
+}
+.ladder li { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+.set { font: 600 calc(1.1rem + var(--w) * 2.6rem)/1 var(--display); white-space: nowrap; }
+.set small { font-size: 0.5em; font-weight: 500; color: var(--steel-soft); margin-left: 0.15em; }
+.ladder .attempt .set { color: var(--red); font-weight: 700; }
+.ladder figcaption { margin-top: 1.5rem; color: var(--steel-soft); font-size: 0.95rem; max-width: var(--measure); }
+
+/* One side of the bar: sleeve, then plates from the inside out. */
+.plates { display: flex; align-items: center; gap: 2px; height: 3.2rem; }
+.plates::before { content: ""; width: 0.35rem; height: 1.2rem; background: var(--bar); border-radius: 1px; }
+.plates::after { content: ""; width: 1.4rem; height: 0.35rem; background: var(--bar); border-radius: 1px; }
+.plates i { display: block; width: 0.5rem; border-radius: 2px; }
+.p25 { height: 3.2rem; background: var(--red); }
+.p20 { height: 2.9rem; background: var(--blue); }
+.p15 { height: 2.5rem; background: var(--yellow); }
+.p10 { height: 2.1rem; background: var(--green); }
+.p5  { height: 1.6rem; background: var(--white-plate); box-shadow: inset 0 0 0 1px var(--bar); }
+.p25s { height: 1.3rem; background: var(--red); }
+.p2s  { height: 1.2rem; background: var(--blue); }
+.p15s { height: 1.1rem; background: var(--yellow); }
+.p1s  { height: 1rem; background: var(--green); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .plates i { transform-origin: left center; animation: load 420ms ease-out both; animation-delay: calc(var(--step) * 90ms + 200ms); }
+  @keyframes load { from { opacity: 0; transform: translateX(-0.6rem); } to { opacity: 1; transform: none; } }
+}
+
+/* Feature rows: text and screenshots side by side, alternating. */
+.feature {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: center;
+  padding: 3.5rem 0; border-bottom: 1px solid var(--rule);
+}
+.feature.flip .copy { order: 2; }
+.feature h2, .page h1, .page h2 { font: 700 clamp(2.2rem, 5vw, 3.2rem)/0.95 var(--display); margin: 0 0 1rem; }
+.feature p { max-width: var(--measure); margin: 0 0 1rem; }
+.feature .notation {
+  font: 500 1.35rem/1.35 var(--display); background: var(--paper); border-left: 4px solid var(--blue);
+  padding: 0.6rem 0.9rem; margin: 0 0 1rem; max-width: var(--measure); overflow-wrap: anywhere;
+}
+.shots { display: flex; justify-content: center; align-items: flex-start; gap: 1rem; }
+.shots .phone { width: 12.5rem; }
+.shots .phone:nth-child(2) { margin-top: 2.5rem; }
+
+.quiet { padding: 3.5rem 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem; }
+.quiet h2 { font: 700 2.2rem/1 var(--display); margin: 0 0 0.75rem; }
+.quiet p { margin: 0 0 1rem; max-width: var(--measure); }
+
+.placeholder { background: var(--yellow); color: #1c252d; padding: 0 0.25em; border-radius: 2px; }
+
+footer {
+  border-top: 1px solid var(--rule); padding: 1.75rem 0 3rem; color: var(--steel-soft); font-size: 0.95rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+}
+footer nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+
+/* Text pages: privacy, support, how-to. */
+.page { max-width: 42rem; padding: 2rem 0 3rem; }
+.page h1 { font-size: clamp(2.8rem, 8vw, 4.2rem); }
+.page h2 { font-size: 2rem; margin-top: 2.5rem; }
+.page p, .page li { max-width: var(--measure); }
+.page .updated { color: var(--steel-soft); }
+.page h3 { font: 600 1.35rem/1.2 var(--display); margin: 1.75rem 0 0.4rem; }
+.page ol, .page ul { padding-left: 1.25rem; }
+.page li { margin-bottom: 0.4rem; }
+.page code { font: 500 1.05em var(--display); background: var(--paper); padding: 0.05em 0.3em; border-radius: 3px; }
+.page .notation { font: 500 1.3rem/1.35 var(--display); background: var(--paper); border-left: 4px solid var(--blue); padding: 0.6rem 0.9rem; overflow-wrap: anywhere; }
+
+@media (max-width: 52rem) {
+  .hero { grid-template-columns: 1fr; gap: 2rem; }
+  .hero .phone { justify-self: center; }
+  .feature { grid-template-columns: 1fr; gap: 2rem; }
+  .feature.flip .copy { order: 0; }
+  .quiet { grid-template-columns: 1fr; gap: 1.5rem; }
+  .shots .phone { width: 9.5rem; }
+}
+@media (max-width: 26rem) {
+  .shots .phone:nth-child(3) { display: none; }
+  .top nav { gap: 0.9rem; }
+}

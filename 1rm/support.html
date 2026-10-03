@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support: 1RM Coach</title>
+  <meta name="description" content="Help and contact for 1RM Coach.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="index.html">1RM Coach</a>
+      <nav aria-label="1RM Coach">
+        <a href="howto.html">How it works</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+    <main class="page">
+      <h1>Support</h1>
+      <p>Questions, bugs or ideas: tell the person who sent you this link for now. A contact address follows soon. Please include your iPhone model and iOS version, and for a bug, what you did just before it happened.</p>
+
+      <h2>Common questions</h2>
+      <h3>Which iPhones does it run on?</h3>
+      <p>Any iPhone with iOS 27. Describing your build-up in free text needs Apple Intelligence (iPhone 15 Pro or newer, switched on in Settings). The short notation works everywhere.</p>
+      <h3>The plates look wrong for my gym.</h3>
+      <p>Set your bar, collars and the number of plate pairs under <strong>Settings</strong>. The app only plans weights it can load with what you have.</p>
+      <h3>I didn&#8217;t hear the rest beep.</h3>
+      <p>Check <strong>Settings &#8594; Rest sounds</strong>. With the phone locked, the app uses a notification instead, so allow notifications for 1RM Coach in the iPhone&#8217;s Settings.</p>
+      <h3>How do I get my data out?</h3>
+      <p>On <strong>History</strong>, use the share button to export everything as a CSV file.</p>
+      <h3>Is there an Android version?</h3>
+      <p>It&#8217;s planned after the iPhone beta.</p>
+
+    </main>
+    <footer>
+      <span>1RM Coach</span>
+      <nav aria-label="More">
+        <a href="howto.html">How it works</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </footer>
+  </div>
+  <script>
+    // The address is assembled in the browser, so it isn't sitting in the page source for spam bots.
+    document.querySelectorAll("a.mail").forEach(function (a) {
+      var address = a.dataset.user + "@" + a.dataset.domain;
+      a.href = "mailto:" + address;
+      a.textContent = address;
+    });
+  </script>
+</body>
+</html>

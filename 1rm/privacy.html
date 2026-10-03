@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy: 1RM Coach</title>
+  <meta name="description" content="1RM Coach collects no data. Everything stays on your iPhone.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="index.html">1RM Coach</a>
+      <nav aria-label="1RM Coach">
+        <a href="howto.html">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+    <main class="page">
+      <h1>Privacy</h1>
+      <p class="updated">Last updated 3 October 2026.</p>
+      <p>1RM Coach does not collect any data about you. There is no account, no analytics, no advertising and no third-party code that reports anything.</p>
+
+      <h2>What stays on your iPhone</h2>
+      <p>Your lifts, sessions, logged sets, training blocks and settings are stored on your iPhone only. They are removed when you delete the app. Your iPhone&#8217;s own backups (iCloud or computer) may include them, as they do for any app, under your control.</p>
+
+      <h2>Notifications</h2>
+      <p>The rest alert is a local notification. It is scheduled on your iPhone and never sent through a server.</p>
+
+      <h2>Describing your build-up in words</h2>
+      <p>Short notation is read by the app itself. Free text is read by Apple&#8217;s on-device language model (Apple Intelligence). The app does not send your text to Apple&#8217;s servers, to Private Cloud Compute or to anyone else.</p>
+
+      <h2>Export</h2>
+      <p>The CSV export only leaves your iPhone when you share it yourself.</p>
+
+      <h2>Beta testing</h2>
+      <p>If you test the app through Apple&#8217;s TestFlight, Apple shares with the developer what TestFlight shares: crash reports, the feedback you send, and, if you were invited by email, your name and email address. They are used only to fix and improve the app.</p>
+
+      <h2>Contact</h2>
+      <p>A contact address for privacy questions follows soon.</p>
+
+    </main>
+    <footer>
+      <span>1RM Coach</span>
+      <nav aria-label="More">
+        <a href="howto.html">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </footer>
+  </div>
+  <script>
+    // The address is assembled in the browser, so it isn't sitting in the page source for spam bots.
+    document.querySelectorAll("a.mail").forEach(function (a) {
+      var address = a.dataset.user + "@" + a.dataset.domain;
+      a.href = "mailto:" + address;
+      a.textContent = address;
+    });
+  </script>
+</body>
+</html>
