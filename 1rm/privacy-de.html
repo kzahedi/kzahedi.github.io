@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutz: 1RM Planner</title>
+  <meta name="description" content="1RM Planner collects no data. Everything stays on your iPhone.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a href="index.html">1RM Planner</a>
+      <nav aria-label="1RM Planner">
+        <a href="howto.html">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" >Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </header>
+    <main class="page">
+      <h1>Datenschutz</h1>
+      <p class="updated">Stand: 4. Oktober 2026. <a href="privacy.html">English version</a>.</p>
+      <p>1RM Planner erhebt keine Daten über dich. Es gibt kein Konto, keine Analyse, keine Werbung und keinen Code von Dritten, der etwas übermittelt.</p>
+
+      <h2>Was auf deinem iPhone bleibt</h2>
+      <p>Deine Übungen, Einheiten, eingetragenen Sätze, Trainingsblöcke und Einstellungen werden nur auf deinem iPhone gespeichert. Sie werden gelöscht, wenn du die App löschst. Die Backups deines iPhones (iCloud oder Computer) können sie enthalten, wie bei jeder App, unter deiner Kontrolle.</p>
+
+      <h2>Mitteilungen</h2>
+      <p>Der Hinweis am Ende der Pause ist eine lokale Mitteilung. Sie wird auf deinem iPhone geplant und nie über einen Server verschickt.</p>
+
+      <h2>Deinen Aufbau in Worten beschreiben</h2>
+      <p>Die Kurzschreibweise liest die App selbst. Freien Text liest Apples Sprachmodell auf dem Gerät (Apple Intelligence). Die App sendet deinen Text weder an Apples Server noch an Private Cloud Compute noch an sonst jemanden.</p>
+
+      <h2>Export</h2>
+      <p>Der CSV-Export verlässt dein iPhone nur, wenn du ihn selbst teilst.</p>
+
+      <h2>Betatest</h2>
+      <p>Wenn du die App über Apples TestFlight testest, teilt Apple mit dem Entwickler, was TestFlight teilt: Absturzberichte, das Feedback, das du schickst, und, wenn du per E-Mail eingeladen wurdest, deinen Namen und deine E-Mail-Adresse. Diese Daten werden nur genutzt, um die App zu verbessern und Fehler zu beheben.</p>
+
+      <h2>Kontakt</h2>
+      <p>Eine Kontaktadresse für Fragen zum Datenschutz folgt in Kürze.</p>
+
+    </main>
+    <footer>
+      <span>1RM Planner</span>
+      <nav aria-label="More">
+        <a href="howto.html">How it works</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html" >Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </footer>
+  </div>
+  <script>
+    // The address is assembled in the browser, so it isn't sitting in the page source for spam bots.
+    document.querySelectorAll("a.mail").forEach(function (a) {
+      var address = a.dataset.user + "@" + a.dataset.domain;
+      a.href = "mailto:" + address;
+      a.textContent = address;
+    });
+  </script>
+</body>
+</html>
