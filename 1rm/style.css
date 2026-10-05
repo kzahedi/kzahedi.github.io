@@ -137,11 +137,6 @@ a:hover { text-decoration-thickness: 2px; }
 .shots { display: flex; justify-content: center; align-items: flex-start; gap: 1rem; }
 .shots .phone { width: 12.5rem; }
 .shots .phone:nth-child(2) { margin-top: 2.5rem; }
-.watch {
-  width: 11rem; border-radius: 3.2rem; padding: 0.7rem;
-  background: #0d1216; box-shadow: 0 1.5rem 3rem -1.5rem rgba(28, 37, 45, 0.55);
-}
-.watch img { border-radius: 2.5rem; }
 
 .quiet { padding: 3.5rem 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem; }
 .quiet h2 { font: 700 2.2rem/1 var(--display); margin: 0 0 0.75rem; }
